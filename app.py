@@ -44,6 +44,19 @@ def main(message):
     elif message.text.lower() in config.how_are_you:
         text = random.choice(config.how_are_you_answer)
         bot.send_message(message.chat.id, text)
+    elif message.text.lower() in config.black_joke:
+        text_1 = random.choice(config.test)
+        bot.send_message(message.chat.id, text_1)
+        time.sleep(1)
+        text_2 = random.choice(config.jokes)
+        bot.send_message(message.chat.id, text_2)
+    elif message.text.lower() in config.black_joke_1:
+        text_1 = random.choice(config.black_joke_answer_1)
+        bot.send_message(message.chat.id, text_1)
+        time.sleep(1)
+        text_2 = random.choice(config.jokes)
+        bot.send_message(message.chat.id, text_2)
+
 
 
 
