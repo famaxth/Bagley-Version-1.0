@@ -1,13 +1,15 @@
+# -*- coding: utf-8 -*-
+
 #Production by Berlin
 #Telegram - @por0vos1k
 
-# -*- coding: utf-8 -*-
 
 import telebot
 import config
 import time
 import random
 from time import sleep
+
 
 bot = telebot.TeleBot(config.token, parse_mode='HTML')
 print("Start")
@@ -56,8 +58,6 @@ def main(message):
         time.sleep(1)
         text_2 = random.choice(config.jokes)
         bot.send_message(message.chat.id, text_2)
-
-
 
 
 if __name__ == '__main__':
