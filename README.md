@@ -7,6 +7,6 @@ A simple chat bot in telegram, written in Python. It answers the user's question
 
 ## How to use
 * Install the script
-* Edit TOKEN in file 
+* Edit `token` in file config.py 
 * [Download Telegram](https://desktop.telegram.org/)
 * Launch the bot!
