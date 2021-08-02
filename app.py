@@ -1,14 +1,11 @@
 # -*- coding: utf-8 -*-
 
-#Production by Famaxth
-#Telegram - @famaxth
-
-
-import telebot
-import config
-import time
 import random
 from time import sleep
+
+import telebot
+
+import config
 
 
 bot = telebot.TeleBot(config.token, parse_mode='HTML')
@@ -19,7 +16,7 @@ def save_name(message):
     f = open('name_user.txt', 'w')
     f.write(message.text)
     bot.send_message(message.chat.id, config.texts['name_1'])
-    time.sleep(2)
+    sleep(2)
     bot.send_message(message.chat.id, config.texts['name_2'])
 
 
@@ -49,13 +46,13 @@ def main(message):
     elif message.text.lower() in config.black_joke:
         text_1 = random.choice(config.test)
         bot.send_message(message.chat.id, text_1)
-        time.sleep(1)
+        sleep(1)
         text_2 = random.choice(config.jokes)
         bot.send_message(message.chat.id, text_2)
     elif message.text.lower() in config.black_joke_1:
         text_1 = random.choice(config.black_joke_answer_1)
         bot.send_message(message.chat.id, text_1)
-        time.sleep(1)
+        sleep(1)
         text_2 = random.choice(config.jokes)
         bot.send_message(message.chat.id, text_2)
 
